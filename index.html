@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDO List</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: gray;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.todo-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.logo h1 {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.todo-app {
+  width: 600px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: blueviolet;
+  margin: 50px auto;
+}
+
+#form {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#form input {
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+
+#form button {
+  width: 18%;
+  cursor: pointer;
+  border: none;
+  background-color: blue;
+  border-radius: 9px;
+  color: #fff;
+}
+
+.todo-item {
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.todo-item span {
+  cursor: pointer;
+  color: blue;
+}
+
+#clear {
+  position: relative;
+  bottom: 40px;
+  left: 500px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: brown;
+  cursor: pointer;
+ color: #fff;
+}
+
+    </style>
+  </head>
+
+  <body>
+    <div class="todo-app">
+      <div class="logo">
+        <h1>ToDo List</h1>
+      </div>
+
+      <button id="clear">clear</button>
+
+      <form id="form">
+        <input id="field" type="text" placeholder="Enter ToDo..." />
+        <button id="button">+</button>
+      </form>
+
+      <div id="todo-items"></div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
